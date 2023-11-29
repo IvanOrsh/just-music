@@ -8,7 +8,7 @@ const alexBrush = Alex_Brush({
   variable: "--font-alexBrush",
 });
 
-const monserrat = Montserrat({
+const montserrat = Montserrat({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
   subsets: ["latin"],
   variable: "--font-montserrat",
@@ -27,8 +27,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${monserrat.variable} ${alexBrush.variable} overflow-x-hidden relative`}
+        className={`${montserrat.variable} ${alexBrush.variable} overflow-x-hidden relative`}
       >
+        <h1 className="pretitle">layout</h1>
+        <button className="btn btn-lg btn-accent">Click me</button>
         {children}
       </body>
     </html>

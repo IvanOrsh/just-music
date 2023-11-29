@@ -2,26 +2,52 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+@layer base {
+  body {
+    @apply bg-primary font-montserrat text-white;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+  h2 {
+    @apply text-[32px] xl:text-[38px] font-semibold leading-tight;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@layer components {
+  .pretitle {
+    @apply font-alexBrush text-[42px] text-accent leading-none;
+  }
+
+  /* buttons */
+  .btn {
+    @apply w-full rounded-full cursor-pointer transition-all flex justify-center items-center font-medium;
+  }
+
+  .btn-sm {
+    @apply w-[146px] h-[50px];
+  }
+
+  .btn-lg {
+    @apply w-[160px] h-[54px];
+  }
+
+  .btn-accent {
+    @apply bg-accent text-white hover:bg-accent-hover;
+  }
+
+  .btn-white {
+    @apply bg-white text-primary hover:bg-white/80;
+  }
+
+  /* section */
+  .section {
+    @apply py-12 xl:py-24;
+  }
+}
+
+:root {
+  --clr-primary: #06062a;
+  --clr-secondary: #151538;
+  --clr-tertiary: #242445;
+  --clr-accent-default: #7f1cfc;
+  --clr-accent-hover: #6519c6;
 }
