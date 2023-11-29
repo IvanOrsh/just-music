@@ -31,7 +31,7 @@
   }
 
   .btn-accent {
-    @apply bg-accent text-tertiary hover:bg-accent-hover hover:text-primary;
+    @apply bg-accent text-white hover:bg-accent-hover;
   }
 
   .btn-white {
