@@ -1,26 +1,7 @@
 import { ZodError, z } from "zod";
 
-// TODO: refactor
-
-// to be extracted
-const EventData = z.object({
-  id: z.number(),
-  date: z.object({
-    day: z.string(),
-    month: z.string(),
-  }),
-  location: z.object({
-    city: z.string(),
-    country: z.string(),
-    address: z.string(),
-  }),
-  priceRange: z.string(),
-});
-
-const EventsData = z.array(EventData);
-
-type Event = z.infer<typeof EventData>;
-type Events = z.infer<typeof EventsData>;
+import EventBox from "../ui/EventBox";
+import { EventsData, type Events } from "../model/types";
 
 const getEvents = async () => {
   try {
@@ -42,7 +23,9 @@ export default async function Events() {
 
   return (
     <section className="section" id="tours">
-      <div className="container mx-auto">{/* event box */}</div>
+      <div className="container mx-auto">
+        <EventBox />
+      </div>
     </section>
   );
 }
