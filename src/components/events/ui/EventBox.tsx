@@ -35,7 +35,7 @@ export default function EventBox({ events }: EventBoxProps) {
         <div className="flex flex-col xl:flex-row justify-between xl:h-full gap-x-4 h-[620px]">
           <div className="hidden xl:flex w-[400px]">
             <Image
-              src={"/assets/events/artist.png"}
+              src={"/assets/events/artist1.png"}
               alt="le artist"
               width={358}
               height={489}
@@ -53,7 +53,7 @@ export default function EventBox({ events }: EventBoxProps) {
                 <div className="flex flex-col xl:flex-row items-center gap-x-4">
                   {/* day & month */}
                   <div className="flex flex-col justify-center items-center leading-tight w-[80px] mb-4 xl:mb-0">
-                    <div className="text-[44px] font-black text-primary">
+                    <div className="text-[44px] font-bold text-accent">
                       {event.date.day}
                     </div>
                     <div className="text-[20px] font-extrabold">
