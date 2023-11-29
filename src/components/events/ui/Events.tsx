@@ -24,7 +24,7 @@ export default async function Events() {
   return (
     <section className="section" id="tours">
       <div className="container mx-auto">
-        <EventBox />
+        <EventBox events={events} />
       </div>
     </section>
   );
