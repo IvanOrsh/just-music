@@ -26,8 +26,8 @@ const config: Config = {
         newsletter: "url(/assets/newsletter/bg.png)",
       },
       fontFamily: {
-        alexBrush: ["--font-alexBrush"],
-        monserrat: ["--font-monserrat", "sans-serif"],
+        alexBrush: ["var(--font-alexBrush)"],
+        montserrat: ["var(--font-montserrat)", "sans-serif"],
       },
       colors: {
         primary: "#06062A",
