@@ -2,6 +2,7 @@ import { ZodError, z } from "zod";
 
 import EventBox from "../ui/EventBox";
 import { EventsData, type Events } from "../model/types";
+import SectionHeader from "@/shared/ui/SectionHeader";
 
 const getEvents = async () => {
   try {
@@ -23,7 +24,8 @@ export default async function Events() {
 
   return (
     <section className="section" id="tours">
-      <div className="container mx-auto">
+      <div className="container mx-auto space-y-8">
+        <SectionHeader pretitle="World Tour" title="Upcoming Events" />
         <EventBox events={events} />
       </div>
     </section>
