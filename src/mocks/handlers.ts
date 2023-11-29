@@ -442,13 +442,13 @@ const posts = [
 
 export const handlers: RequestHandler[] = [
   http.get("/events", async ({ request }) => {
-    console.log('Captured a "GET /test" request');
+    console.log('Captured a "GET /events" request');
 
     return HttpResponse.json(events);
   }),
 
   http.get("/events/:id", async ({ request, params }) => {
-    console.log('Captured a "GET /test/:id" request', params.id);
+    console.log('Captured a "GET /events/:id" request', params.id);
 
     const { id } = params;
 
