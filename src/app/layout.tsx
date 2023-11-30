@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Alex_Brush, Montserrat } from "next/font/google";
 
-import { Header } from "@/components/header";
+import { Header, NavContextProvider } from "@/components/header";
 import Footer from "@/components/Footer";
 import "./globals.css";
 
@@ -28,14 +28,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body
-        className={`${montserrat.variable} ${alexBrush.variable} overflow-x-hidden relative`}
-      >
-        <Header />
-        {children}
-        <Footer />
-      </body>
-    </html>
+    <NavContextProvider>
+      <html lang="en">
+        <body
+          className={`${montserrat.variable} ${alexBrush.variable} overflow-x-hidden relative`}
+        >
+          <Header />
+          {children}
+          <Footer />
+        </body>
+      </html>
+    </NavContextProvider>
   );
 }
