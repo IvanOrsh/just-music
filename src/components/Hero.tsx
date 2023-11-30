@@ -27,10 +27,10 @@ const locationSequence = [
 
 export default function Hero() {
   return (
-    <section className="h-[80vh]  xl:h-[850px]" id="home">
-      <div className="relative container mx-auto h-full flex justify-center items-center xl:justify-start ">
+    <section className="h-[80vh]  xl:h-[850px] select-none" id="home">
+      <div className="container relative  mx-auto h-full flex justify-center items-center xl:justify-start ">
         {/* text */}
-        <div className=" h-full flex flex-col justify-center items-center xl:items-start z-20 pt-12">
+        <div className="relative h-full flex flex-col justify-center items-center xl:items-start z-20 pt-12">
           <MouseParallaxContainer
             globalFactorX={0.1}
             globalFactorY={0.2}
@@ -47,7 +47,7 @@ export default function Hero() {
                 initial="hidden"
                 whileInView={"show"}
                 viewport={{ once: false, amount: 0.3 }}
-                className="w-[300px] h-[101.37px] xl:w-[725px] xl:h-[244.97px]"
+                className="w-[300px] h-[101.37px] relative xl:w-[725px] xl:h-[244.97px]"
               >
                 <Image
                   src="/assets/hero/typo-1.svg"
@@ -68,7 +68,7 @@ export default function Hero() {
                 initial="hidden"
                 whileInView={"show"}
                 viewport={{ once: false, amount: 0.3 }}
-                className="w-[300px] h-[101.37px] xl:w-[625px] xl:h-[244.97px]"
+                className="relative w-[300px] h-[101.37px] xl:w-[625px] xl:h-[244.97px]"
               >
                 <Image
                   src="/assets/hero/typo-2.svg"
@@ -89,7 +89,7 @@ export default function Hero() {
                 initial="hidden"
                 whileInView={"show"}
                 viewport={{ once: false, amount: 0.3 }}
-                className="w-[150px] h-[100px] xl:w-[248px] xl:h-[200px] mix-blend-luminosity"
+                className="relative w-[150px] h-[100px] xl:w-[248px] xl:h-[200px] mix-blend-luminosity"
               >
                 <Image
                   src="/assets/hero/bird.png"
@@ -157,7 +157,7 @@ export default function Hero() {
             alt="hero"
             quality={100}
             priority
-            height={893}
+            height={800}
             width={617}
           />
         </motion.div>

@@ -31,7 +31,7 @@ export default function EventBox({ events }: EventBoxProps) {
       whileInView={"show"}
       viewport={{ once: false, amount: 0.3 }}
     >
-      <div className="bg-secondary/80 rounded-[10px] p-4 xl:p-12 relative">
+      <div className="bg-secondary/80 rounded-[10px] xl:p-12 relative">
         <div className="flex flex-col xl:flex-row justify-between xl:h-full gap-x-4 h-[620px]">
           <div className="hidden xl:flex w-[400px]">
             <Image
