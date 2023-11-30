@@ -1,8 +1,23 @@
 "use client";
 
-import { PropsWithChildren, createContext, useMemo, useState } from "react";
+import {
+  PropsWithChildren,
+  createContext,
+  useMemo,
+  useState,
+  useContext,
+} from "react";
+import { boolean } from "zod";
 
-export const NavContext = createContext({});
+interface NavContext {
+  isOpen: boolean;
+  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+export const NavContext = createContext<NavContext>({
+  isOpen: false,
+  setIsOpen: () => {},
+});
 
 export default function NavContextProvider({ children }: PropsWithChildren) {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,3 +26,7 @@ export default function NavContextProvider({ children }: PropsWithChildren) {
 
   return <NavContext.Provider value={value}>{children}</NavContext.Provider>;
 }
+
+export const useNavContext = () => {
+  return useContext(NavContext);
+};

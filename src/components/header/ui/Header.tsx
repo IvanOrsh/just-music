@@ -9,10 +9,12 @@ import NavMobile from "./NavMobile";
 import Nav from "./Nav";
 import MenuBtn from "./MenuBtn";
 import Socials from "./Socials";
+import { useNavContext } from "./NavContext";
 import { fadeIn } from "@/shared/variants";
 
 export default function Header() {
   const [active, setActive] = useState(false);
+  const { setIsOpen, isOpen } = useNavContext();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -45,11 +47,11 @@ export default function Header() {
         <Nav containerStyles="hidden xl:flex items-center gap-x-4" />
 
         {/* nav mobile */}
-        <NavMobile />
+        <NavMobile isOpen={isOpen} onCloseHandler={() => setIsOpen(false)} />
 
         {/* menu btn */}
         <div className="absolute right-7 top-9 z-10 xl:hidden">
-          <MenuBtn />
+          <MenuBtn onClickHandler={() => setIsOpen(!isOpen)} />
         </div>
 
         {/* social icons */}

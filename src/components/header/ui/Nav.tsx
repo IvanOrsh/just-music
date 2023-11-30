@@ -1,4 +1,5 @@
 import { Link } from "react-scroll";
+import { useMediaQuery } from "react-responsive";
 
 type NavProps = {
   containerStyles?: string;
@@ -25,6 +26,10 @@ const links = [
 ];
 
 export default function Nav({ containerStyles, linkStyles }: NavProps) {
+  const isDesktop = useMediaQuery({
+    query: "(min-width: 1310px)",
+  });
+
   return (
     <nav>
       <ul className={`${containerStyles}`}>
@@ -34,7 +39,7 @@ export default function Nav({ containerStyles, linkStyles }: NavProps) {
               to={link.path}
               className={`${linkStyles} cursor-pointer border-2 border-transparent`}
               spy
-              smooth
+              smooth={isDesktop}
               activeClass="active"
               offset={-50}
             >
