@@ -52,7 +52,7 @@
   --clr-accent-hover: #6519c6;
 }
 
-/* man player */
+/* player */
 .rap-progress {
   @apply !bg-[#6519c8];
 }
@@ -90,4 +90,9 @@
 }
 .rap-volume-controls {
   @apply !bg-accent/30;
+}
+
+/* nav */
+.active {
+  @apply border-0 border-b-2 border-accent;
 }
