@@ -8,7 +8,13 @@ import { fadeIn } from "@/shared/variants";
 
 export default function Player() {
   return (
-    <div className="section mx-auto mt-20 bg-gradient-to-r from-tertiary/70 to-primary/10 backdrop-blur-0 flex items-center ">
+    <motion.div
+      variants={fadeIn("up", 0.3)}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: false, amount: 0.3 }}
+      className="section mx-auto mt-20 bg-gradient-to-r from-tertiary/70 to-primary/10 backdrop-blur-0 flex items-center "
+    >
       <div className="container mx-auto flex flex-col items-center xl:flex-row">
         {/* text & avatar */}
         <div className="hidden w-[300px] xl:flex items-center gap-x-4">
@@ -41,6 +47,6 @@ export default function Player() {
           />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
