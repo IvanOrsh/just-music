@@ -6,7 +6,7 @@ import SectionHeader from "@/shared/ui/SectionHeader";
 
 const getEvents = async () => {
   try {
-    const response = await fetch("http://localhost:9090/events");
+    const response = await fetch("http://localhost:3000/api/events");
     const obj: Events = EventsData.parse(await response.json());
     return obj;
   } catch (error) {
