@@ -1,6 +1,8 @@
 import { Link } from "react-scroll";
 import { useMediaQuery } from "react-responsive";
 
+// TODO: refactor - must receive links as props
+
 type NavProps = {
   containerStyles?: string;
   linkStyles?: string;
@@ -18,6 +20,10 @@ const links = [
   {
     path: "discography",
     name: "Discography",
+  },
+  {
+    path: "blog",
+    name: "Blog",
   },
   {
     path: "contact",

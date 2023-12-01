@@ -3,14 +3,12 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
 
 import NavMobile from "./NavMobile";
 import Nav from "./Nav";
 import MenuBtn from "./MenuBtn";
-import Socials from "./Socials";
 import { useNavContext } from "./NavContext";
-import { fadeIn } from "@/shared/variants";
+import Socials from "@/shared/ui/Socials";
 
 export default function Header() {
   const [active, setActive] = useState(false);
