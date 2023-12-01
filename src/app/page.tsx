@@ -1,9 +1,8 @@
-import Image from "next/image";
-
-import { Events } from "@/components/events";
 import Hero from "@/components/Hero";
 import Player from "@/components/Player";
+import { Events } from "@/components/events";
 import { Albums } from "@/components/albums";
+import { Blog } from "@/components/blog";
 
 export default function Home() {
   return (
@@ -12,6 +11,7 @@ export default function Home() {
       <Player />
       <Events />
       <Albums />
+      <Blog />
     </main>
   );
 }
