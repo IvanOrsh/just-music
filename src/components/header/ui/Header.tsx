@@ -5,9 +5,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 import NavMobile from "./NavMobile";
-import Nav from "./Nav";
 import MenuBtn from "./MenuBtn";
 import { useNavContext } from "./NavContext";
+import Nav from "@/shared/ui/Nav";
 import Socials from "@/shared/ui/Socials";
 
 export default function Header() {

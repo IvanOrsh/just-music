@@ -1,6 +1,6 @@
 import { RiCloseLine } from "react-icons/ri";
 
-import Nav from "./Nav";
+import Nav from "@/shared/ui/Nav";
 
 type NavMobileProps = {
   isOpen: boolean;
