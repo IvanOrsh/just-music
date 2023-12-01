@@ -31,6 +31,7 @@ export default function Player() {
         {/* player */}
         <div className="w-full max-w-4xl">
           <AudioPlayer
+            width={"100%"}
             loop
             preload="none"
             color="#333"
